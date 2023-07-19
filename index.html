@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Calculator</title>
+  </head>
+  <style>
+    body{
+        background-color: black;
+    }
+
+    main{
+        text-align: center;
+    }
+    
+    #calculation{
+        padding: 30px;
+        font-size: 20px;
+        border: 0;
+        border-radius: 20px;
+        background: #fff;
+        color: #000;
+    }
+    
+    button{
+        background: orange;
+        color: #fff;
+        border: none;
+        border-radius: 50%;
+        font-size: 20px;
+        padding: 30px;
+    }
+
+    @media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+
+  main{
+    text-align: center;
+  }
+}
+  </style>
+  <body>
+    <main>
+    <input type="text" id="calculation" disabled />
+    <p>
+      <button onclick="
+        document.getElementById('calculation').value += '1';
+      ">1</button>
+      
+      <button onclick="
+        document.getElementById('calculation').value += '2';
+      ">2</button>
+
+      <button onclick="
+        document.getElementById('calculation').value += '3';
+      ">3</button>
+
+      <button onclick="
+        document.getElementById('calculation').value += ' + ';
+      ">+</button>
+    </p>
+
+    <p>
+      <button onclick="
+        document.getElementById('calculation').value += '4';
+      ">4</button>
+      
+      <button onclick="
+        document.getElementById('calculation').value += '5';
+      ">5</button>
+
+      <button onclick="
+        document.getElementById('calculation').value += '6';
+      ">6</button>
+
+      <button onclick="
+        document.getElementById('calculation').value += ' - ';
+      ">-</button>
+    </p>
+
+    <p>
+      <button onclick="
+        document.getElementById('calculation').value += '7';
+      ">7</button>
+      
+      <button onclick="
+        document.getElementById('calculation').value += '8';
+      ">8</button>
+
+      <button onclick="
+        document.getElementById('calculation').value += '9';
+      ">9</button>
+
+      <button onclick="
+        document.getElementById('calculation').value += ' * ';
+      ">*</button>
+    </p>
+
+    <p>
+      <button onclick="
+        document.getElementById('calculation').value += '0';
+      ">0</button>
+      
+      <button onclick="
+        document.getElementById('calculation').value += '.';
+      ">.</button>
+
+      <button onclick="
+        document.getElementById('calculation').value = eval(document.getElementById('calculation').value);
+      ">=</button>
+
+      <button onclick="
+        document.getElementById('calculation').value += ' / ';
+      ">/</button>
+    </p>
+
+    <p>
+      <button onclick="
+        document.getElementById('calculation').value = '';
+      ">Clear</button>
+    </p>
+    </main>
+   
+    <script>
+      let calculation = '';
+      let result = document.getElementById('calculation');
+
+      result.textContent = calculation.value;
+    </script>
+  </body>
+</html>
